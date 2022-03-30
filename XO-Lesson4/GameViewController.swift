@@ -134,11 +134,18 @@ class GameViewController: UIViewController {
             }
             
         case .fiveCellsGame:
+            
+            if gameboardView.markViewForPosition.count == 9 {
+                if let winner = self.referee.determineWinner() {
+                    self.currentState = GameEndedstate(winner: winner, gameViewController: self)
+                    return
+                }
+            }
+        
             if let fiveCellsState = currentState as? FiveCellsState {
                 self.currentState = FiveCellsState(player: fiveCellsState.player.next(player: fiveCellsState.player, gameMode: secondLabelText), gameViewController: self, gameBoard: gameBoard, gameBoardView: gameboardView)
             }
         }
-        
     }
 }
 

@@ -46,19 +46,18 @@ class FiveCellsState: GameState {
   public  func addMark(at position: GameboardPosition) {
         logging(.playerInput(player: player, position: position))
         
-        let markView: MarkView
-        
+      var markView: MarkView
+      
         switch self.player {
         case.first:
             markView = XView()
-            //markView.isHidden = true
             self.gameBoard?.setPlayer(self.player, at: position)
             self.gameBoardView?.placeMarkView(markView, at: position)
             if let gameBoardView = gameBoardView {
                 let count = gameBoardView.markViewForPosition.count
                 if count < 5 {
                     self.isCompleted = false
-                    print(gameBoardView.markViewForPosition.count)
+                    print(count)
                 } else {
                     self.isCompleted = true
                 }
@@ -70,8 +69,9 @@ class FiveCellsState: GameState {
             self.gameBoardView?.placeMarkViewFiveCells(markView, at: position)
             if let gameBoardView = gameBoardView {
                 let count = gameBoardView.markViewForPosition.count
-                if count < 10 {
+                if count < 9 {
                     self.isCompleted = false
+                    print(count)
                 } else {
                     self.isCompleted = true
                 }
@@ -80,8 +80,5 @@ class FiveCellsState: GameState {
         case .computer:
             print("There is no session for computer in this game state")
         }
-        
     }
-    
-    
 }
