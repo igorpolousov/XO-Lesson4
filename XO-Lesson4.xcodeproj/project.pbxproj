@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C21BC72127F453B800359FF7 /* GameSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21BC72027F453B800359FF7 /* GameSwitch.swift */; };
 		C28F028C27F43C470087BF65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F028B27F43C470087BF65 /* AppDelegate.swift */; };
 		C28F028E27F43C470087BF65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F028D27F43C470087BF65 /* SceneDelegate.swift */; };
 		C28F029327F43C470087BF65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28F029127F43C470087BF65 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C21BC72027F453B800359FF7 /* GameSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSwitch.swift; sourceTree = "<group>"; };
 		C28F028827F43C470087BF65 /* XO-Lesson4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XO-Lesson4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28F028B27F43C470087BF65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C28F028D27F43C470087BF65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				C28F02AA27F43F240087BF65 /* GameState.swift */,
 				C28F02AC27F43F440087BF65 /* GameEndState.swift */,
 				C28F02AE27F43F580087BF65 /* FiveCellsState.swift */,
+				C21BC72027F453B800359FF7 /* GameSwitch.swift */,
 			);
 			path = StatePattern;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				C28F02BF27F440CE0087BF65 /* Player.swift in Sources */,
 				C28F02B527F440020087BF65 /* Logger.swift in Sources */,
 				C28F02A527F43E2C0087BF65 /* GameViewController.swift in Sources */,
+				C21BC72127F453B800359FF7 /* GameSwitch.swift in Sources */,
 				C28F02A727F43E910087BF65 /* Referee.swift in Sources */,
 				C28F02B127F43FDD0087BF65 /* LogAction.swift in Sources */,
 				C28F02B327F43FF60087BF65 /* LogCommand.swift in Sources */,

@@ -9,15 +9,15 @@ import Foundation
 
 class FiveCellsState: GameState {
     
-    var isCompleted: Bool = false
-    let player: Player
+    public private(set) var isCompleted: Bool = false
+    public let player: Player
     
     var playerOneArray: [GameboardPosition] = []
     var playerTwoArray: [GameboardPosition] = []
     
-    var gameViewController: GameViewController?
-    var gameBoard: Gameboard?
-    var gameBoardView: GameboardView?
+    public private(set) weak var gameViewController: GameViewController?
+    public private(set) weak var gameBoard: Gameboard?
+    public private(set) weak var gameBoardView: GameboardView?
     
     init(player: Player, gameViewController: GameViewController, gameBoard: Gameboard, gameBoardView: GameboardView ) {
         self.player = player
@@ -26,10 +26,9 @@ class FiveCellsState: GameState {
         self.gameBoardView = gameBoardView
     }
     
-    func begin() {
+   public func begin() {
         
         switch self.player {
-            
         case .first:
             self.gameViewController?.firstPlayerTurnLabel.isHidden = false
             self.gameViewController?.secondPlayerTurnLabel.isHidden = true
@@ -41,37 +40,47 @@ class FiveCellsState: GameState {
         case .computer:
             print("There is no computer session for this game mode")
         }
-        
         self.gameViewController?.winnerLabel.isHidden = true
     }
     
-    func addMark(at position: GameboardPosition) {
+  public  func addMark(at position: GameboardPosition) {
         logging(.playerInput(player: player, position: position))
         
-        let markView: MarkView
-        
+      var markView: MarkView
+      
         switch self.player {
         case.first:
             markView = XView()
-            for _ in 1...5 {
-                self.gameBoard?.setPlayer(self.player, at: position)
-                self.gameBoardView?.placeMarkView(markView, at: position)
+            markView.isHidden = true
+            self.gameBoard?.setPlayer(self.player, at: position)
+            self.gameBoardView?.placeMarkView(markView, at: position)
+            if let gameBoardView = gameBoardView {
+                let count = gameBoardView.markViewForPosition.count
+                if count < 5 {
+                    self.isCompleted = false
+                    print(count)
+                } else {
+                    self.isCompleted = true
+                }
             }
-            self.isCompleted = true
-            
+
         case .second:
             markView = OView()
-            for _ in 1...5 {
-                self.gameBoard?.setPlayer(self.player, at: position)
-                self.gameBoardView?.placeMarkView(markView, at: position)
+            markView.isHidden = true
+            self.gameBoard?.setPlayer(self.player, at: position)
+            self.gameBoardView?.placeMarkViewFiveCells(markView, at: position)
+            if let gameBoardView = gameBoardView {
+                let count = gameBoardView.markViewForPosition.count
+                if count < 9 {
+                    print("Count \(count)")
+                    self.isCompleted = false
+                } else {
+                    self.isCompleted = true
+                }
             }
-            self.isCompleted = true
             
         case .computer:
             print("There is no session for computer in this game state")
         }
-        
     }
-    
-    
 }

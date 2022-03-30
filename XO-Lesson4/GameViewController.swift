@@ -12,7 +12,7 @@ protocol Copying {
 }
 
 class GameViewController: UIViewController {
-
+    
     @IBOutlet var gameboardView: GameboardView!
     @IBOutlet var firstPlayerTurnLabel: UILabel!
     @IBOutlet var secondPlayerTurnLabel: UILabel!
@@ -33,6 +33,11 @@ class GameViewController: UIViewController {
     }
     
     private var playerType: Player?
+    private var gameSwitch: GameSwitch = GameSwitch.normalGame {
+        didSet {
+            self.gameSwitch
+        }
+    }
     
     private lazy var referee = Referee(gameboard: self.gameBoard)
     
@@ -59,7 +64,6 @@ class GameViewController: UIViewController {
             gameboardView.isHidden = true
         }
         
-        
         self.goToFirstState()
         
         gameboardView.onSelectPosition = { [weak self] position in
@@ -76,7 +80,7 @@ class GameViewController: UIViewController {
         goToFirstState()
         logging(.restartGame)
     }
-        
+    
     @IBAction func vsPlayerTapped(_ sender: UIButton) {
         gameboardView.isHidden = false
         secondLabelText = "2nd Player"
@@ -88,28 +92,60 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func fiveCellsTapped(_ sender: UIButton) {
-        
+        gameboardView.isHidden = false
+        gameSwitch = GameSwitch.fiveCellsGame
+        secondLabelText = "2nd Player"
+        goToFirstState()
     }
     
     @IBAction func normalGameTapped(_ sender: UIButton) {
-        
+        gameboardView.isHidden = false
+        gameSwitch = GameSwitch.normalGame
+        goToFirstState()
     }
     
     private func goToFirstState() {
         gameBoard.clear()
         gameboardView.clear()
-        self.currentState = PlayerInputState(player: .first, gameViewController: self, gameBoard: gameBoard, gameBoardView: gameboardView)
+        let player = Player.first
+        
+        switch gameSwitch {
+        case .normalGame:
+            self.currentState = PlayerInputState(player: player, gameViewController: self, gameBoard: gameBoard, gameBoardView: gameboardView)
+        case .fiveCellsGame:
+            self.currentState = FiveCellsState(player: player, gameViewController: self, gameBoard: gameBoard, gameBoardView: gameboardView)
+        }
     }
     
     private func goToNextState() {
         
-        if let winner = self.referee.determineWinner() {
-            self.currentState = GameEndedstate(winner: winner, gameViewController: self)
-            return
-        }
-        
-        if let playerInputState = currentState as? PlayerInputState {
-            self.currentState = PlayerInputState(player: playerInputState.player.next(player: playerInputState.player, gameMode: secondLabelText), gameViewController: self, gameBoard: gameBoard, gameBoardView: gameboardView)
+        switch gameSwitch {
+        case .normalGame:
+            
+            if let winner = self.referee.determineWinner() {
+                self.currentState = GameEndedstate(winner: winner, gameViewController: self)
+                return
+            }
+            
+            if let playerInputState = currentState as? PlayerInputState {
+                self.currentState = PlayerInputState(player: playerInputState.player.next(player: playerInputState.player, gameMode: secondLabelText), gameViewController: self, gameBoard: gameBoard, gameBoardView: gameboardView)
+            }
+            
+        case .fiveCellsGame:
+            
+            if gameboardView.markViewForPosition.count == 9 {
+                for view in gameboardView.subviews {
+                    view.isHidden = false
+                }
+                if let winner = self.referee.determineWinner() {
+                    self.currentState = GameEndedstate(winner: winner, gameViewController: self)
+                    return
+                }
+            }
+            
+            if let fiveCellsState = currentState as? FiveCellsState {
+                self.currentState = FiveCellsState(player: fiveCellsState.player.next(player: fiveCellsState.player, gameMode: secondLabelText), gameViewController: self, gameBoard: gameBoard, gameBoardView: gameboardView)
+            }
         }
     }
 }
