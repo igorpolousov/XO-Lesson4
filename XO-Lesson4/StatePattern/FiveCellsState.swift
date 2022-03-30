@@ -53,13 +53,27 @@ class FiveCellsState: GameState {
             markView = XView()
             self.gameBoard?.setPlayer(self.player, at: position)
             self.gameBoardView?.placeMarkView(markView, at: position)
-            self.isCompleted = true
-            
+            if let gameBoardView = gameBoardView {
+                let count = gameBoardView.markViewForPosition.count
+                if count < 5 {
+                    self.isCompleted = false
+                } else {
+                    self.isCompleted = true
+                }
+            }
+
         case .second:
             markView = OView()
             self.gameBoard?.setPlayer(self.player, at: position)
             self.gameBoardView?.placeMarkView(markView, at: position)
-            self.isCompleted = true
+            if let gameBoardView = gameBoardView {
+                let count = gameBoardView.markViewForPosition.count
+                if count < 10 {
+                    self.isCompleted = false
+                } else {
+                    self.isCompleted = true
+                }
+            }
             
         case .computer:
             print("There is no session for computer in this game state")
