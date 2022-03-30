@@ -15,6 +15,9 @@
 		C28F02A527F43E2C0087BF65 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F02A427F43E2C0087BF65 /* GameViewController.swift */; };
 		C28F02A727F43E910087BF65 /* Referee.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F02A627F43E910087BF65 /* Referee.swift */; };
 		C28F02A927F43EDD0087BF65 /* ButtonsDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F02A827F43EDD0087BF65 /* ButtonsDesign.swift */; };
+		C28F02AB27F43F240087BF65 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F02AA27F43F240087BF65 /* GameState.swift */; };
+		C28F02AD27F43F440087BF65 /* GameEndState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F02AC27F43F440087BF65 /* GameEndState.swift */; };
+		C28F02AF27F43F580087BF65 /* FiveCellsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F02AE27F43F580087BF65 /* FiveCellsState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		C28F02A427F43E2C0087BF65 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		C28F02A627F43E910087BF65 /* Referee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Referee.swift; sourceTree = "<group>"; };
 		C28F02A827F43EDD0087BF65 /* ButtonsDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsDesign.swift; sourceTree = "<group>"; };
+		C28F02AA27F43F240087BF65 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		C28F02AC27F43F440087BF65 /* GameEndState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndState.swift; sourceTree = "<group>"; };
+		C28F02AE27F43F580087BF65 /* FiveCellsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveCellsState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +71,8 @@
 				C28F02A427F43E2C0087BF65 /* GameViewController.swift */,
 				C28F02A627F43E910087BF65 /* Referee.swift */,
 				C28F02A827F43EDD0087BF65 /* ButtonsDesign.swift */,
-				C28F02A027F43CBB0087BF65 /* CommandPattern */,
 				C28F029F27F43CA30087BF65 /* StatePattern */,
+				C28F02A027F43CBB0087BF65 /* CommandPattern */,
 				C28F02A127F43CD10087BF65 /* Models */,
 				C28F02A227F43CDB0087BF65 /* Views */,
 				C28F029127F43C470087BF65 /* Main.storyboard */,
@@ -80,6 +86,9 @@
 		C28F029F27F43CA30087BF65 /* StatePattern */ = {
 			isa = PBXGroup;
 			children = (
+				C28F02AA27F43F240087BF65 /* GameState.swift */,
+				C28F02AC27F43F440087BF65 /* GameEndState.swift */,
+				C28F02AE27F43F580087BF65 /* FiveCellsState.swift */,
 			);
 			path = StatePattern;
 			sourceTree = "<group>";
@@ -187,7 +196,10 @@
 				C28F028C27F43C470087BF65 /* AppDelegate.swift in Sources */,
 				C28F02A527F43E2C0087BF65 /* GameViewController.swift in Sources */,
 				C28F02A727F43E910087BF65 /* Referee.swift in Sources */,
+				C28F02AB27F43F240087BF65 /* GameState.swift in Sources */,
 				C28F02A927F43EDD0087BF65 /* ButtonsDesign.swift in Sources */,
+				C28F02AF27F43F580087BF65 /* FiveCellsState.swift in Sources */,
+				C28F02AD27F43F440087BF65 /* GameEndState.swift in Sources */,
 				C28F028E27F43C470087BF65 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
