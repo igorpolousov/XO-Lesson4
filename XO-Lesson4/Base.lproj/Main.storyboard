@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1st player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyE-7i-9c4">
-                                <rect key="frame" x="44" y="44" width="79" height="21"/>
+                                <rect key="frame" x="44" y="44" width="87" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -63,7 +63,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dw-x8-bjz">
-                                <rect key="frame" x="16" y="573" width="130" height="26"/>
+                                <rect key="frame" x="16" y="573" width="138" height="26"/>
                                 <inset key="contentEdgeInsets" minX="12" minY="4" maxX="12" maxY="4"/>
                                 <state key="normal" title="Normal game"/>
                                 <connections>
@@ -122,7 +122,7 @@
                             <constraint firstItem="Ka6-H8-DDh" firstAttribute="leading" secondItem="4dw-x8-bjz" secondAttribute="leading" id="nUp-pc-crQ"/>
                             <constraint firstItem="Ka6-H8-DDh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rb5-pN-jrb"/>
                             <constraint firstItem="5M8-Sh-pRf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="19" id="uuQ-0H-hy8"/>
-                            <constraint firstItem="NwX-Ua-Ag8" firstAttribute="leading" secondItem="4dw-x8-bjz" secondAttribute="trailing" constant="83" id="yvQ-3c-u7z"/>
+                            <constraint firstItem="NwX-Ua-Ag8" firstAttribute="leading" secondItem="4dw-x8-bjz" secondAttribute="trailing" constant="75" id="yvQ-3c-u7z"/>
                         </constraints>
                     </view>
                     <connections>
