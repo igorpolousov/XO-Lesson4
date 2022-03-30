@@ -12,7 +12,7 @@ protocol Copying {
 }
 
 class GameViewController: UIViewController {
-
+    
     @IBOutlet var gameboardView: GameboardView!
     @IBOutlet var firstPlayerTurnLabel: UILabel!
     @IBOutlet var secondPlayerTurnLabel: UILabel!
@@ -80,7 +80,7 @@ class GameViewController: UIViewController {
         goToFirstState()
         logging(.restartGame)
     }
-        
+    
     @IBAction func vsPlayerTapped(_ sender: UIButton) {
         gameboardView.isHidden = false
         secondLabelText = "2nd Player"
@@ -115,11 +115,9 @@ class GameViewController: UIViewController {
         case .fiveCellsGame:
             self.currentState = FiveCellsState(player: player, gameViewController: self, gameBoard: gameBoard, gameBoardView: gameboardView)
         }
-        
     }
     
     private func goToNextState() {
-        
         
         switch gameSwitch {
         case .normalGame:
@@ -136,12 +134,15 @@ class GameViewController: UIViewController {
         case .fiveCellsGame:
             
             if gameboardView.markViewForPosition.count == 9 {
+                for view in gameboardView.subviews {
+                    view.isHidden = false
+                }
                 if let winner = self.referee.determineWinner() {
                     self.currentState = GameEndedstate(winner: winner, gameViewController: self)
                     return
                 }
             }
-        
+            
             if let fiveCellsState = currentState as? FiveCellsState {
                 self.currentState = FiveCellsState(player: fiveCellsState.player.next(player: fiveCellsState.player, gameMode: secondLabelText), gameViewController: self, gameBoard: gameBoard, gameBoardView: gameboardView)
             }

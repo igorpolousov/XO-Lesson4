@@ -51,6 +51,7 @@ class FiveCellsState: GameState {
         switch self.player {
         case.first:
             markView = XView()
+            markView.isHidden = true
             self.gameBoard?.setPlayer(self.player, at: position)
             self.gameBoardView?.placeMarkView(markView, at: position)
             if let gameBoardView = gameBoardView {
@@ -65,13 +66,14 @@ class FiveCellsState: GameState {
 
         case .second:
             markView = OView()
+            markView.isHidden = true
             self.gameBoard?.setPlayer(self.player, at: position)
             self.gameBoardView?.placeMarkViewFiveCells(markView, at: position)
             if let gameBoardView = gameBoardView {
                 let count = gameBoardView.markViewForPosition.count
                 if count < 9 {
+                    print("Count \(count)")
                     self.isCompleted = false
-                    print(count)
                 } else {
                     self.isCompleted = true
                 }
