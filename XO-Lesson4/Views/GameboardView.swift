@@ -52,6 +52,13 @@ public class GameboardView: UIView {
         addSubview(markView)
     }
     
+    public func placeMarkViewFiveCells(_ markView: MarkView, at position: GameboardPosition) {
+        guard self.canPlaceMarkView(at: position) else { return removeMarkView(at: position) }
+        updateFrame(for: markView, at: position)
+        markViewForPosition[position] = markView
+        addSubview(markView)
+    }
+    
     public func removeMarkView(at position: GameboardPosition) {
         guard let markView = markViewForPosition[position] else {
             return

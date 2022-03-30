@@ -92,12 +92,14 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func fiveCellsTapped(_ sender: UIButton) {
+        gameboardView.isHidden = false
         gameSwitch = GameSwitch.fiveCellsGame
         secondLabelText = "2nd Player"
         goToFirstState()
     }
     
     @IBAction func normalGameTapped(_ sender: UIButton) {
+        gameboardView.isHidden = false
         gameSwitch = GameSwitch.normalGame
         goToFirstState()
     }
@@ -118,16 +120,19 @@ class GameViewController: UIViewController {
     
     private func goToNextState() {
         
-        if let winner = self.referee.determineWinner() {
-            self.currentState = GameEndedstate(winner: winner, gameViewController: self)
-            return
-        }
         
         switch gameSwitch {
         case .normalGame:
+            
+            if let winner = self.referee.determineWinner() {
+                self.currentState = GameEndedstate(winner: winner, gameViewController: self)
+                return
+            }
+            
             if let playerInputState = currentState as? PlayerInputState {
                 self.currentState = PlayerInputState(player: playerInputState.player.next(player: playerInputState.player, gameMode: secondLabelText), gameViewController: self, gameBoard: gameBoard, gameBoardView: gameboardView)
             }
+            
         case .fiveCellsGame:
             if let fiveCellsState = currentState as? FiveCellsState {
                 self.currentState = FiveCellsState(player: fiveCellsState.player.next(player: fiveCellsState.player, gameMode: secondLabelText), gameViewController: self, gameBoard: gameBoard, gameBoardView: gameboardView)
