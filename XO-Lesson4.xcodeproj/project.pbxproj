@@ -22,6 +22,10 @@
 		C28F02B327F43FF60087BF65 /* LogCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F02B227F43FF60087BF65 /* LogCommand.swift */; };
 		C28F02B527F440020087BF65 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F02B427F440020087BF65 /* Logger.swift */; };
 		C28F02B727F440170087BF65 /* LoggerInvoker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F02B627F440170087BF65 /* LoggerInvoker.swift */; };
+		C28F02B927F440950087BF65 /* GameboardPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F02B827F440950087BF65 /* GameboardPosition.swift */; };
+		C28F02BB27F440AB0087BF65 /* GameboardSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F02BA27F440AB0087BF65 /* GameboardSize.swift */; };
+		C28F02BD27F440B90087BF65 /* Gameboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F02BC27F440B90087BF65 /* Gameboard.swift */; };
+		C28F02BF27F440CE0087BF65 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F02BE27F440CE0087BF65 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		C28F02B227F43FF60087BF65 /* LogCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCommand.swift; sourceTree = "<group>"; };
 		C28F02B427F440020087BF65 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		C28F02B627F440170087BF65 /* LoggerInvoker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerInvoker.swift; sourceTree = "<group>"; };
+		C28F02B827F440950087BF65 /* GameboardPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameboardPosition.swift; sourceTree = "<group>"; };
+		C28F02BA27F440AB0087BF65 /* GameboardSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameboardSize.swift; sourceTree = "<group>"; };
+		C28F02BC27F440B90087BF65 /* Gameboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gameboard.swift; sourceTree = "<group>"; };
+		C28F02BE27F440CE0087BF65 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +123,10 @@
 		C28F02A127F43CD10087BF65 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C28F02B827F440950087BF65 /* GameboardPosition.swift */,
+				C28F02BA27F440AB0087BF65 /* GameboardSize.swift */,
+				C28F02BC27F440B90087BF65 /* Gameboard.swift */,
+				C28F02BE27F440CE0087BF65 /* Player.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -207,6 +219,9 @@
 			files = (
 				C28F02B727F440170087BF65 /* LoggerInvoker.swift in Sources */,
 				C28F028C27F43C470087BF65 /* AppDelegate.swift in Sources */,
+				C28F02BD27F440B90087BF65 /* Gameboard.swift in Sources */,
+				C28F02B927F440950087BF65 /* GameboardPosition.swift in Sources */,
+				C28F02BF27F440CE0087BF65 /* Player.swift in Sources */,
 				C28F02B527F440020087BF65 /* Logger.swift in Sources */,
 				C28F02A527F43E2C0087BF65 /* GameViewController.swift in Sources */,
 				C28F02A727F43E910087BF65 /* Referee.swift in Sources */,
@@ -217,6 +232,7 @@
 				C28F02AF27F43F580087BF65 /* FiveCellsState.swift in Sources */,
 				C28F02AD27F43F440087BF65 /* GameEndState.swift in Sources */,
 				C28F028E27F43C470087BF65 /* SceneDelegate.swift in Sources */,
+				C28F02BB27F440AB0087BF65 /* GameboardSize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
