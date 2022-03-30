@@ -15,16 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FlK-xv-cci">
-                                <rect key="frame" x="16" y="621" width="114" height="26"/>
-                                <inset key="contentEdgeInsets" minX="12" minY="4" maxX="12" maxY="4"/>
-                                <state key="normal" title="Restart"/>
-                                <connections>
-                                    <action selector="restartButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y1y-1k-KbS"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1st player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyE-7i-9c4">
-                                <rect key="frame" x="44" y="44" width="73" height="21"/>
+                                <rect key="frame" x="44" y="44" width="51" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -35,17 +27,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner is 1st player!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5M8-Sh-pRf">
-                                <rect key="frame" x="111" y="85" width="153" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Winner is 1st player!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5M8-Sh-pRf">
+                                <rect key="frame" x="110.5" y="85" width="153" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ka6-H8-DDh">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ka6-H8-DDh">
                                 <rect key="frame" x="16" y="133" width="150" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="DrZ-ZH-u1w"/>
-                                    <constraint firstAttribute="height" constant="50" id="FXA-yj-Y94"/>
+                                    <constraint firstAttribute="width" constant="150" id="4UQ-Sx-P1d"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="VS Player"/>
@@ -53,12 +44,8 @@
                                     <action selector="vsPlayerTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ekD-rl-OGJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0g9-en-wjI">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0g9-en-wjI">
                                 <rect key="frame" x="209" y="133" width="150" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="uB9-vc-Hfl"/>
-                                    <constraint firstAttribute="width" constant="150" id="yQe-oh-bij"/>
-                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="VS Computer"/>
                                 <connections>
@@ -66,62 +53,83 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NwX-Ua-Ag8">
-                                <rect key="frame" x="246" y="620" width="113" height="26"/>
+                                <rect key="frame" x="229" y="573" width="130" height="26"/>
                                 <inset key="contentEdgeInsets" minX="12" minY="4" maxX="12" maxY="4"/>
                                 <state key="normal" title="5 Cells game"/>
                                 <connections>
                                     <action selector="fiveCellsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kUV-Eb-NBe"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LYG-3D-cJV">
-                                <rect key="frame" x="0.0" y="191" width="375" height="393"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dw-x8-bjz">
+                                <rect key="frame" x="16" y="573" width="130" height="26"/>
+                                <inset key="contentEdgeInsets" minX="12" minY="4" maxX="12" maxY="4"/>
+                                <state key="normal" title="Normal game"/>
+                                <connections>
+                                    <action selector="normalGameTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="acD-2Z-beN"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LYG-3D-cJV">
+                                <rect key="frame" x="12" y="191" width="350" height="310"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FpC-lq-59T" customClass="GameboardView" customModule="XO_Lesson4" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="8" width="343" height="343"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FpC-lq-59T" customClass="GameboardView" customModule="XO_Lesson4" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="310"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="FpC-lq-59T" secondAttribute="height" id="j79-XI-cai"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="FpC-lq-59T" secondAttribute="trailing" constant="16" id="qTA-6g-kBz"/>
-                                    <constraint firstItem="FpC-lq-59T" firstAttribute="centerY" secondItem="LYG-3D-cJV" secondAttribute="centerY" constant="-17" id="rtG-DT-ZNh"/>
-                                    <constraint firstItem="FpC-lq-59T" firstAttribute="leading" secondItem="LYG-3D-cJV" secondAttribute="leading" constant="16" id="yDG-za-FiU"/>
+                                    <constraint firstItem="FpC-lq-59T" firstAttribute="top" secondItem="LYG-3D-cJV" secondAttribute="top" id="6Lg-Z1-Aak"/>
+                                    <constraint firstAttribute="trailing" secondItem="FpC-lq-59T" secondAttribute="trailing" id="HuO-HR-sVb"/>
+                                    <constraint firstAttribute="bottom" secondItem="FpC-lq-59T" secondAttribute="bottom" id="nHV-J9-BA5"/>
+                                    <constraint firstItem="FpC-lq-59T" firstAttribute="leading" secondItem="LYG-3D-cJV" secondAttribute="leading" id="zbs-Nl-BJi"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FlK-xv-cci">
+                                <rect key="frame" x="122" y="539" width="130" height="26"/>
+                                <inset key="contentEdgeInsets" minX="12" minY="4" maxX="12" maxY="4"/>
+                                <state key="normal" title="Restart"/>
+                                <connections>
+                                    <action selector="restartButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y1y-1k-KbS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NwX-Ua-Ag8" firstAttribute="top" secondItem="LYG-3D-cJV" secondAttribute="bottom" constant="36" id="0Dv-2g-5it"/>
-                            <constraint firstItem="Ka6-H8-DDh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3LK-aK-N3h"/>
-                            <constraint firstItem="FlK-xv-cci" firstAttribute="top" secondItem="LYG-3D-cJV" secondAttribute="bottom" constant="37" id="7Cg-Od-ODs"/>
-                            <constraint firstItem="5M8-Sh-pRf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="AYe-Ek-i4a"/>
-                            <constraint firstItem="FlK-xv-cci" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="-114.5" id="Frx-qz-lKB"/>
-                            <constraint firstItem="0g9-en-wjI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="GAG-uA-wut"/>
-                            <constraint firstItem="LYG-3D-cJV" firstAttribute="top" secondItem="5M8-Sh-pRf" secondAttribute="bottom" constant="85" id="GaF-PX-RbP"/>
-                            <constraint firstItem="FlK-xv-cci" firstAttribute="height" secondItem="NwX-Ua-Ag8" secondAttribute="height" id="KeS-Yh-vXr"/>
-                            <constraint firstItem="FlK-xv-cci" firstAttribute="width" secondItem="NwX-Ua-Ag8" secondAttribute="width" multiplier="0.654867" constant="40" id="N0n-xs-FmU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FlK-xv-cci" secondAttribute="bottom" constant="20" id="XVv-6S-n3b"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LSW-na-Of7" secondAttribute="trailing" constant="44" id="att-TZ-kx7"/>
-                            <constraint firstItem="lyE-7i-9c4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="eA7-42-PYI"/>
-                            <constraint firstItem="5M8-Sh-pRf" firstAttribute="top" secondItem="lyE-7i-9c4" secondAttribute="bottom" constant="20" id="gzs-I8-cAh"/>
-                            <constraint firstItem="Ka6-H8-DDh" firstAttribute="top" secondItem="0g9-en-wjI" secondAttribute="top" id="hjh-ED-BhR"/>
-                            <constraint firstItem="Ka6-H8-DDh" firstAttribute="top" secondItem="5M8-Sh-pRf" secondAttribute="bottom" constant="27" id="iW5-QZ-aFC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LYG-3D-cJV" secondAttribute="trailing" id="l3w-q7-ZAq"/>
-                            <constraint firstItem="lyE-7i-9c4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="nrD-pT-cfQ"/>
-                            <constraint firstItem="LSW-na-Of7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="tji-xt-eHD"/>
-                            <constraint firstItem="LYG-3D-cJV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tod-Ts-l8E"/>
-                            <constraint firstItem="NwX-Ua-Ag8" firstAttribute="trailing" secondItem="0g9-en-wjI" secondAttribute="trailing" id="uGG-4p-qGH"/>
-                            <constraint firstItem="LSW-na-Of7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lyE-7i-9c4" secondAttribute="trailing" constant="8" symbolic="YES" id="zzk-Xb-alW"/>
+                            <constraint firstItem="LYG-3D-cJV" firstAttribute="top" secondItem="Ka6-H8-DDh" secondAttribute="bottom" constant="8" symbolic="YES" id="4wr-aQ-HvP"/>
+                            <constraint firstItem="lyE-7i-9c4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="4yc-sW-ACO"/>
+                            <constraint firstItem="lyE-7i-9c4" firstAttribute="centerX" secondItem="4dw-x8-bjz" secondAttribute="centerX" constant="-11.5" id="6h8-l7-h6c"/>
+                            <constraint firstItem="4dw-x8-bjz" firstAttribute="top" secondItem="FlK-xv-cci" secondAttribute="bottom" constant="8" symbolic="YES" id="96Q-wc-ygN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4dw-x8-bjz" secondAttribute="bottom" constant="68" id="9bp-dd-w4a"/>
+                            <constraint firstItem="LYG-3D-cJV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="D5K-33-idT"/>
+                            <constraint firstItem="FlK-xv-cci" firstAttribute="top" secondItem="LYG-3D-cJV" secondAttribute="bottom" constant="38" id="KLQ-iM-SwM"/>
+                            <constraint firstItem="5M8-Sh-pRf" firstAttribute="centerX" secondItem="LYG-3D-cJV" secondAttribute="centerX" id="Lmv-35-Sia"/>
+                            <constraint firstItem="0g9-en-wjI" firstAttribute="leading" secondItem="Ka6-H8-DDh" secondAttribute="trailing" constant="43" id="N22-iR-c1s"/>
+                            <constraint firstItem="5M8-Sh-pRf" firstAttribute="top" secondItem="lyE-7i-9c4" secondAttribute="bottom" constant="20" id="Odk-Ax-yWm"/>
+                            <constraint firstItem="0g9-en-wjI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Pb2-TR-QlF"/>
+                            <constraint firstItem="lyE-7i-9c4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="TiV-Qw-EKA"/>
+                            <constraint firstItem="NwX-Ua-Ag8" firstAttribute="centerX" secondItem="0g9-en-wjI" secondAttribute="centerX" constant="10" id="VJ4-wI-OGU"/>
+                            <constraint firstItem="Ka6-H8-DDh" firstAttribute="baseline" secondItem="0g9-en-wjI" secondAttribute="baseline" id="ZFm-qU-0wU"/>
+                            <constraint firstItem="lyE-7i-9c4" firstAttribute="baseline" secondItem="LSW-na-Of7" secondAttribute="baseline" id="gHQ-9h-jr6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NwX-Ua-Ag8" secondAttribute="trailing" constant="16" id="hiq-76-jEV"/>
+                            <constraint firstItem="5M8-Sh-pRf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110.5" id="hjT-IF-sXp"/>
+                            <constraint firstItem="LYG-3D-cJV" firstAttribute="centerX" secondItem="FlK-xv-cci" secondAttribute="centerX" id="iUo-cz-H8D"/>
+                            <constraint firstItem="FlK-xv-cci" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="kOt-K1-s7d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LSW-na-Of7" secondAttribute="trailing" constant="44" id="kYQ-KU-3I4"/>
+                            <constraint firstItem="LSW-na-Of7" firstAttribute="centerX" secondItem="NwX-Ua-Ag8" secondAttribute="centerX" constant="-3" id="lVT-zA-PEm"/>
+                            <constraint firstItem="Ka6-H8-DDh" firstAttribute="top" secondItem="5M8-Sh-pRf" secondAttribute="bottom" constant="27" id="lj5-KZ-0I2"/>
+                            <constraint firstItem="NwX-Ua-Ag8" firstAttribute="baseline" secondItem="4dw-x8-bjz" secondAttribute="baseline" id="nFy-fJ-9VS"/>
+                            <constraint firstItem="Ka6-H8-DDh" firstAttribute="leading" secondItem="4dw-x8-bjz" secondAttribute="leading" id="nUp-pc-crQ"/>
+                            <constraint firstItem="Ka6-H8-DDh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rb5-pN-jrb"/>
+                            <constraint firstItem="5M8-Sh-pRf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uuQ-0H-hy8"/>
+                            <constraint firstItem="NwX-Ua-Ag8" firstAttribute="leading" secondItem="4dw-x8-bjz" secondAttribute="trailing" constant="83" id="yvQ-3c-u7z"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="firstPlayerTurnLabel" destination="lyE-7i-9c4" id="1eC-po-kqk"/>
                         <outlet property="fiveCellsButton" destination="NwX-Ua-Ag8" id="JXE-cP-es5"/>
                         <outlet property="gameboardView" destination="FpC-lq-59T" id="oJQ-bB-6DM"/>
+                        <outlet property="normalGameButton" destination="4dw-x8-bjz" id="U5T-dF-9UU"/>
                         <outlet property="restartButton" destination="FlK-xv-cci" id="AAG-Vv-7b0"/>
                         <outlet property="secondPlayerTurnLabel" destination="LSW-na-Of7" id="udX-YE-30Y"/>
                         <outlet property="vsComputer" destination="0g9-en-wjI" id="bif-qk-CQq"/>

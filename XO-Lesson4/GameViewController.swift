@@ -21,6 +21,7 @@ class GameViewController: UIViewController {
     @IBOutlet var vsPlayer: UIButton!
     @IBOutlet var vsComputer: UIButton!
     @IBOutlet var fiveCellsButton: UIButton!
+    @IBOutlet var normalGameButton: UIButton!
     
     private let gameBoard = Gameboard()
     
@@ -50,6 +51,7 @@ class GameViewController: UIViewController {
         vsComputer.setup()
         restartButton.setup()
         fiveCellsButton.setup()
+        normalGameButton.setup()
         secondLabelText = ""
         
         
@@ -86,6 +88,10 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func fiveCellsTapped(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func normalGameTapped(_ sender: UIButton) {
         
     }
     
