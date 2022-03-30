@@ -58,7 +58,7 @@ public class GameboardView: UIView {
             markViewForPosition[position] = markView
             addSubview(markView)
         } else {
-            removeMarkView(at: position)
+            //removeMarkView(at: position)
             updateFrame(for: markView, at: position)
             markViewForPosition[position] = markView
             addSubview(markView)
