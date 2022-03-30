@@ -5,8 +5,7 @@
 //  Created by Igor Polousov on 30.03.2022.
 //
 
-import Foundation
-
+import UIKit
 
 // MARK: - GameboardView
 public class GameboardView: UIView {
